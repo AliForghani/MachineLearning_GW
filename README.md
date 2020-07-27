@@ -8,6 +8,7 @@ factors that potentially impact REN. These factors are: background gradient, hyd
 longitudinal dispersivity. In MODFLOW-MT3DMS simulations extraction begins after storing the injected water in well for 12 months.
 ## Source
 Data has been recieved from the author.
+
 https://www.sciencedirect.com/science/article/pii/S0022169418304645?via%3Dihub
 
 data folder consist of the data were used in this project
