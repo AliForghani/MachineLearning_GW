@@ -224,18 +224,12 @@ plt.scatter(test_targets[:,6]*100,predictions[:,6]*100,color="blue")
 plt.plot([0,100],[0,100],color="red")
 plt.xlabel("Measured")
 plt.ylabel("Predicted")
-
-plt.subplot(2,1,2)
-plt.scatter(predictions[:,6]*100,(test_targets[:,6]-predictions[:,6])*100,color="blue")
-plt.plot([0,100],[0,0],color="red")
-plt.xlabel("Predicted (%)")
-plt.ylabel("Residual (%)")
 plt.tight_layout()
 plt.show()
 ```
 ![](Results/image.png?raw=true)
 
-now that the residual plot looks good we can save the model for future uses.
+now that the plot looks good we can save the model for future uses.
 
 **Save the model**
 ```python
