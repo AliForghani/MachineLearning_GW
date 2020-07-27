@@ -3,18 +3,17 @@ import tensorflow as tf
 import os
 
 tf.random.set_seed(500)
-Dir="C:/Users/azadeh/Desktop/machineLearningProject/Ali_project"
 
-npz = np.load('data_train.npz')
+npz = np.load('Results/data_train.npz')
 
 train_inputs = npz['inputs'].astype(np.float)
 train_targets = npz['targets'].astype(np.float)
 
-npz = np.load(os.path.join(Dir,'data_validation.npz'))
+npz = np.load('Results/data_validation.npz')
 
 validation_inputs, validation_targets = npz['inputs'].astype(np.float), npz['targets'].astype(np.float)
 
-npz = np.load(os.path.join(Dir,'data_test.npz'))
+npz = np.load('Results/data_test.npz')
 
 test_inputs, test_targets = npz['inputs'].astype(np.float), npz['targets'].astype(np.float)
 
