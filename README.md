@@ -215,7 +215,7 @@ The Test result of Test accuarcy are good.
 
 **plot**
 
-Plot the model prediction vs measured data for test data.To see the residuals and differences.
+Plot the model prediction vs measured data for test data to check the residuals and differences.
 ```python
 predictions = model.predict(test_inputs)
 print("predictions shape:", predictions.shape)
