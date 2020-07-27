@@ -1,6 +1,5 @@
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 tf.random.set_seed(500)
 
 npz = np.load('../Results/data_train.npz')
