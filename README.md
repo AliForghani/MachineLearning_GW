@@ -232,5 +232,5 @@ now that the plot looks good we can save the model for future uses.
 
 **Save the model**
 ```python
-model.save("model.h5")
+model.save("../Results/model.h5")
 ```
