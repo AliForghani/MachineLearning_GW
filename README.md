@@ -19,7 +19,6 @@ data folder consist of the data were used in this project
 * statsmodels
 * pandas
 * matplotlib
-* seaborn
 ## Solution
 Herein, we describe the use of Python packages for this project.
 
@@ -33,6 +32,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.base import BaseEstimator, TransformerMixin
 import statsmodels.api as sm
 import pandas as pd
+import matplotlib.pyplot as plt
 import pickle
 ```
 **Preprocessing of data**
@@ -211,7 +211,28 @@ print('\nTest loss: {0:.2f}. Test accuracy: {1:.2f}%'.format(test_loss, test_acc
 
 Test loss: 0.02. Test accuracy: 98.20%
 
-The Test results are very good so we save the model.
+The Test result of Test accuarcy are good.
+
+**plot**
+
+Plot the model prediction vs measured data for test data to check the residuals and differences.
+```python
+predictions = model.predict(test_inputs)
+print("predictions shape:", predictions.shape)
+plt.subplot(2,1,1)
+plt.scatter(test_targets[:,6]*100,predictions[:,6]*100,color="blue")
+plt.plot([0,100],[0,100],color="red")
+plt.xlabel("Measured")
+plt.ylabel("Predicted")
+
+plt.subplot(2,1,2)
+plt.scatter(test_targets[:,6]*100,(test_targets[:,6]-predictions[:,6])*100,color="blue")
+plt.plot([0,100],[0,0],color="red")
+plt.xlabel("Predicted")
+plt.ylabel("Residual")
+plt.tight_layout()
+plt.show()
+```
 
 **Save the model**
 ```python
