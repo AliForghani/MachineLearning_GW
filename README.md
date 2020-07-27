@@ -233,7 +233,7 @@ plt.ylabel("Residual")
 plt.tight_layout()
 plt.show()
 ```
-![Image](http://C:/Users/azadeh/Desktop/machineLearningProject/Ali_project/Figure_1.png)
+![Image](C:/Users/azadeh/Desktop/machineLearningProject/Ali_project/Figure_1.png)
 
 **Save the model**
 ```python
