@@ -4,7 +4,7 @@ import os
 from sklearn import preprocessing
 import statsmodels.api as sm
 import pandas as pd
-raw_csv_data = pd.read_csv("Input_data/Data.out",delim_whitespace=True)
+raw_csv_data = pd.read_csv("../Input_data/Data.out",delim_whitespace=True)
 raw_csv_data["ratio"]=raw_csv_data["Ext"]/raw_csv_data["Inj"]
 scaled_data = preprocessing.scale(raw_csv_data)
 Scaled_DF=pd.DataFrame(scaled_data,columns=raw_csv_data.columns)

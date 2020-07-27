@@ -1,19 +1,18 @@
 import numpy as np
 import tensorflow as tf
-import os
-
+import matplotlib.pyplot as plt
 tf.random.set_seed(500)
 
-npz = np.load('Results/data_train.npz')
+npz = np.load('../Results/data_train.npz')
 
 train_inputs = npz['inputs'].astype(np.float)
 train_targets = npz['targets'].astype(np.float)
 
-npz = np.load('Results/data_validation.npz')
+npz = np.load('../Results/data_validation.npz')
 
 validation_inputs, validation_targets = npz['inputs'].astype(np.float), npz['targets'].astype(np.float)
 
-npz = np.load('Results/data_test.npz')
+npz = np.load('../Results/data_test.npz')
 
 test_inputs, test_targets = npz['inputs'].astype(np.float), npz['targets'].astype(np.float)
 
@@ -50,4 +49,4 @@ model.fit(train_inputs,
 test_loss, test_accuracy = model.evaluate(test_inputs, test_targets)
 print('\nTest loss: {0:.2f}. Test accuracy: {1:.2f}%'.format(test_loss, test_accuracy*100.))
 
-model.save("model.h5")
+model.save("../Results/model.h5")

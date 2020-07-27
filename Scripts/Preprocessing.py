@@ -1,12 +1,8 @@
 import numpy as np
 from sklearn import preprocessing
 import pandas as pd
-import os
-from sklearn.preprocessing import StandardScaler
-from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.preprocessing import StandardScaler
 
-raw_csv_data = pd.read_csv("Input_data/Data.out",delim_whitespace=True)
+raw_csv_data = pd.read_csv("../Input_data/Data.out",delim_whitespace=True)
 pd.options.display.max_columns = None
 raw_csv_data=raw_csv_data.drop(["DSP"],axis=1)
 unscaled_inputs_all=raw_csv_data.iloc[:,0:6]
@@ -40,9 +36,9 @@ print(np.sum(train_targets), train_samples_count, np.sum(train_targets) / train_
 print(np.sum(validation_targets), validation_samples_count, np.sum(validation_targets) / validation_samples_count)
 print(np.sum(test_targets), test_samples_count, np.sum(test_targets) / test_samples_count)
 
-np.savez('Results/data_train', inputs=train_inputs, targets=train_targets)
-np.savez('Results/data_validation', inputs=validation_inputs, targets=validation_targets)
-np.savez('Results/data_test', inputs=test_inputs, targets=test_targets)
+np.savez('../Results/data_train', inputs=train_inputs, targets=train_targets)
+np.savez('../Results/data_validation', inputs=validation_inputs, targets=validation_targets)
+np.savez('../Results/data_test', inputs=test_inputs, targets=test_targets)
 
 
 
