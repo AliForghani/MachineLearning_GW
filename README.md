@@ -226,7 +226,7 @@ plt.xlabel("Measured")
 plt.ylabel("Predicted")
 plt.show()
 ```
-![](Results/image.png?raw=true)
+
 
 now that the residual plot looks good we can save the model for future uses.
 
