@@ -207,6 +207,12 @@ model.fit(train_inputs,
 test_loss, test_accuracy = model.evaluate(test_inputs, test_targets)
 print('\nTest loss: {0:.2f}. Test accuracy: {1:.2f}%'.format(test_loss, test_accuracy*100.))
 ```
+**Test result**
+
+Test loss: 0.02. Test accuracy: 98.20%
+
+The Test results are very good so we save the model.
+
 **Save the model**
 ```python
 model.save("model.h5")
