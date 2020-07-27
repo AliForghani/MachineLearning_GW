@@ -218,8 +218,7 @@ The Test result of Test accuarcy are good.
 Plot the model prediction vs measured data for one of the outputs test data.
 ```python
 predictions = model.predict(test_inputs)
-print("predictions shape:", predictions.shape)
-plt.subplot(2,1,1)
+
 plt.scatter(test_targets[:,6]*100,predictions[:,6]*100,color="blue")
 plt.plot([0,100],[0,100],color="red")
 plt.xlabel("Measured")
