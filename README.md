@@ -233,6 +233,7 @@ plt.ylabel("Residual")
 plt.tight_layout()
 plt.show()
 ```
+![](Results/image.png?raw=true)
 
 **Save the model**
 ```python
