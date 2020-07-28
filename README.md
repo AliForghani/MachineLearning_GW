@@ -1,4 +1,4 @@
-# Using deep learning neural networks to Predict the recovery effectivness (REN) of water well
+# Using deep learning neural networks to Predict the recovery effectiveness (REN) of water well
 **This repository contains project data, notes and scripts for  artificial neural network based predicting of REN using factors that significantly affecting REN in water well.**  
 ## Description
 The REN performance criterion equals the amount of the water injected in water well that is recoverable via the same well during a specified exatraction period.
